@@ -1,0 +1,340 @@
+/* ============google font=========== */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=League+Spartan:wght@400;500;600;700&display=swap');
+
+/* ============variables css========== */
+:root{
+    --header-height: 4rem;
+
+
+/* ======color=============== */
+/* color mode hsl(hue, saturation, lightness */
+--first-color: hsl(176, 88%, 27%);
+--first-color-alt: hsl(129, 44%, 94%);
+--second-color: hsl(34, 94%, 87%);
+--title-color: hsl(0, 0%, 13%);
+--text-color: hsl(154, 13%, 32%);
+--text-color-light: hsl(60, 1%, 56%);
+--body-color: hsl(0, 0%, 100%);
+--container-color: hsl(0, 0%, 93%);
+--border-color: hsl(129, 36%, 85%);
+--border-color-alt: hsl(113, 15%, 90%);
+
+/* ==========font and typography===== */
+/* .5rem = 8px 1rem = 16px ...... */
+--body-font:'Lato',sans-serif;
+--second-font: 'League Spartan' , sans-serif;
+--big-font-size: 3.5rem;
+--h1-font-size: 2.75rem;
+--h2-font-size: 2rem;
+--h3-font-size: 1.75rem;
+--h4-font-size: 1.375rem;
+--large-font-size:1.125rem;
+--normal-font-size: 1rem;
+--small-font-size: 0.875rem;
+--smaller-font-size: 0.75rem;
+--tiny-font-size: 0.6875rem;
+
+/* ======font weight===== */
+--weight-400:400;
+--weight-500:500;
+--weight-600:600;
+--weight-700:700;
+
+/* =======transition======= */
+
+--transition: cubic-bezier(0,0,0.05,1);
+}
+
+@media  screen and (max-width : 1200px) {
+
+}
+
+/* ====== basic===== */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+input,textarea,body{
+    color: var(--text-color);
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    font-weight: var(--weight-400);
+
+}
+
+body{
+    background-color: var(--body-color);
+}
+
+h1,h2,h3,h4{
+    font-family: var(--second-font);
+    color: var(--title-color);
+    font-weight: var(--weight-600);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    line-height: 1.5rem;
+}
+
+img{
+    max-width: 100%;
+}
+
+button,textarea,input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.container{
+    /* background-color: var(--first-color); */
+    max-width: 1320px;
+    margin-inline: auto;
+    padding-inline: 2rem;
+    
+   
+}
+
+.grid{
+    display: grid;
+    gap: 1.5rem;
+}
+
+.section-lg{
+    padding-block: 4rem;
+}
+
+.form-input{
+    border: 1px solid var(--border-color-alt);
+    padding-inline: 1rem;
+    height: 45px;
+    border-radius: 0.25rem;
+    font-size: var(--small-font-size);
+}
+
+/* ===========HEADER AND NAV============== */
+
+.header-top{
+    background-color: var(--first-color-alt);
+    border-bottom: 1px solid var(--first-color);
+    padding-block: 0rem;
+    
+
+
+}
+
+/* .header-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} */
+.header-contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-contact span:first-child{
+    margin: .75rem;
+}
+
+.header-contact,
+.header-alert-news,
+.header-top-action{
+    font-size: var(--small-font-size);
+}
+
+.header-alert-news{
+    color: var(--text-color-light);
+    font-weight: var(--weight-600);
+}
+
+.header-top-action{
+    color: var(--text-color);
+}
+
+/* nav========================= */
+
+.nav,
+.nav-manu,
+.nav-list,
+.header-user-actions{
+    display: flex;
+    align-items: center;
+}
+
+.nav{
+    /* background-color: var(--first-color); */
+    height: calc(var(--header-height) + 1rem);
+    justify-content: space-between;
+    column-gap: 1rem;
+    
+}
+
+.nav-logo img{
+    width: 70px;
+    
+}
+
+.search-btn img,
+.header-action-btn{
+    width: 20px;
+}
+.nav-manu{
+    /* background-color: var(--first-color); */
+    width: 100%;
+    margin-left: 2.5rem;
+}
+
+.nav-list{
+    margin-right: auto;
+    column-gap: 2.5rem;
+    
+
+}
+
+.nev-link{
+    color: var(--title-color);
+    font-weight: var(--weight-700);
+    transition: all 0.2s var(--transition);
+}
+
+.header-search{
+    width: 340px;
+}
+
+.header-search,
+.form-input{
+    border: 1px solid var(--border-color-alt);
+    width: 20%;
+}
+
+.search-btn{
+    position: absolute;
+    /* top: 24%; */
+    /* right: 1rem; */
+    cursor: pointer;
+}
+
+.header-user-actions{
+    column-gap: 1.25rem;
+}
+
+.header-action-btn{
+    position: relative;
+}
+
+.header-action-btn img{
+    width: 18px;
+}
+
+
+.header-action-btn .count{
+    position: absolute;
+    top: -0.625 rem;
+    right: -0.625rem;
+    background-color: var(--first-color);
+    color: var(--body-color);
+    height: 18px;
+    width: 18px;
+    line-height: 18px;
+    border-radius: 40%;
+    text-align: center;font-size: var(--tiny-font-size);
+}
+.nav-item{
+    font-weight: bolder;
+}
+
+
+
+/* Active link */
+.active-link,.nav-link:hover{
+    color: var(--first-color)
+}
+
+/* ===========Home========= */
+.home-container{
+    grid-template-columns: 5fr 7fr;
+    align-items: center;
+}
+
+.home-subtitle,
+.home-description{
+    font-size: var(--large-font-size);
+}
+
+.home-subtitle{
+    font-family: var(--second-color);
+    font-weight: var(--weight-600);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.home-title{
+    font-size: var(--h1-font-size);
+    font-weight: var(--weight-700);
+    line-height: 1.4;
+}
+
+.home-title span{
+    color: var(--first-color);
+    font-size: var(--big-font-size);
+}
+
+.home-description{
+    margin-block: .5rem 2rem;
+}
+
+/* .home-imge{
+     justify-self: flex-end; 
+} */
+
+/* ==============buttons============= */
+.btn{
+    display: inline-block;
+    background-color: var(--first-color);
+    border: 2px solid var(--first-color);
+    color: var(--body-color);
+    padding-inline: 1.75rem;
+    height: 49px;
+    line-height: 49px;
+    border-radius: .25rem;
+    font-family: var(--second-font);
+    font-size: var(--small-font-size);
+    font-weight: var(--weight-700);
+    transition: al 0.4s var(--transition);
+}
+
+.btn:hover{
+    background-color: transparent;
+    color: var(--first-color);
+}
+
+.swiper-wrapper {
+    margin: 2rem;
+    padding: 5rem;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
+    box-sizing: content-box;
+    gap: 1rem;
+}
+
+.swiper-wrapper {
+    transform: translate3d(0px, 0, 0);
+    padding: 20px;
+    margin: 10px;
+}
+
